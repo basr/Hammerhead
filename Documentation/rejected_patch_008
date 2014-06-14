@@ -1,5 +1,8 @@
-1 out of 1 hunk ignored -- saving rejects to file drivers/base/power/main.c.rej
-1 out of 3 hunks FAILED -- saving rejects to file kernel/power/suspend.c.rej
+1 out of 1 hunk ignored -- saving rejects to file drivers/base/power/main.c.rej (no fix needed)
+1 out of 3 hunks FAILED -- saving rejects to file kernel/power/suspend.c.rej (fixed)
 
+XTRA FIX
+
+fs/ext4/resize.c
 
 
