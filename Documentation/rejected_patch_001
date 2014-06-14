@@ -1,8 +1,8 @@
-1 out of 1 hunk ignored -- saving rejects to file arch/arm/include/asm/cacheflush.h.rej
-1 out of 1 hunk ignored -- saving rejects to file arch/arm/kernel/traps.c.rej
-1 out of 1 hunk ignored -- saving rejects to file drivers/mmc/core/sdio.c.rej
-2 out of 2 hunks ignored -- saving rejects to file drivers/mmc/core/sdio_irq.c.rej
-1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej
-2 out of 2 hunks ignored -- saving rejects to file include/linux/mmc/host.h.rej
-1 out of 1 hunk FAILED -- saving rejects to file kernel/workqueue.c.rej
+1 out of 1 hunk ignored -- saving rejects to file arch/arm/include/asm/cacheflush.h.rej (no fix needed)
+1 out of 1 hunk ignored -- saving rejects to file arch/arm/kernel/traps.c.rej (no fix needed)
+1 out of 1 hunk ignored -- saving rejects to file drivers/mmc/core/sdio.c.rej (no fix needed)
+2 out of 2 hunks ignored -- saving rejects to file drivers/mmc/core/sdio_irq.c.rej (no fix needed)
+1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej (fixed)
+2 out of 2 hunks ignored -- saving rejects to file include/linux/mmc/host.h.rej (no fix needed)
+1 out of 1 hunk FAILED -- saving rejects to file kernel/workqueue.c.rej (skip fix)
 
