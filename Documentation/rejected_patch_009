@@ -1,15 +1,14 @@
-1 out of 1 hunk ignored -- saving rejects to file arch/arm/kernel/smp.c.rej
-2 out of 2 hunks FAILED -- saving rejects to file arch/arm/mm/tlb-v7.S.rej
-1 out of 1 hunk FAILED -- saving rejects to file arch/arm/vfp/entry.S.rej
-1 out of 1 hunk ignored -- saving rejects to file arch/arm/vfp/vfpmodule.c.rej
-1 out of 1 hunk ignored -- saving rejects to file arch/ia64/kernel/irq_ia64.c.rej
-24 out of 24 hunks ignored -- saving rejects to file drivers/char/random.c.rej
-2 out of 2 hunks ignored -- saving rejects to file drivers/mfd/ab3100-core.c.rej
-1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/core/hub.c.rej
-1 out of 1 hunk ignored -- saving rejects to file include/linux/irqdesc.h.rej
-1 out of 1 hunk ignored -- saving rejects to file include/linux/random.h.rej
-3 out of 3 hunks ignored -- saving rejects to file kernel/irq/handle.c.rej
-2 out of 2 hunks ignored -- saving rejects to file kernel/irq/manage.c.rej
-3 out of 3 hunks ignored -- saving rejects to file net/core/dev.c.rej
-1 out of 1 hunk ignored -- saving rejects to file net/core/rtnetlink.c.rej
+1 out of 1 hunk ignored -- saving rejects to file arch/arm/kernel/smp.c.rej (no fix needed)
+2 out of 2 hunks FAILED -- saving rejects to file arch/arm/mm/tlb-v7.S.rej (fixed)
+1 out of 1 hunk FAILED -- saving rejects to file arch/arm/vfp/entry.S.rej (fixed)
+1 out of 1 hunk ignored -- saving rejects to file arch/ia64/kernel/irq_ia64.c.rej (no fix needed)
+24 out of 24 hunks ignored -- saving rejects to file drivers/char/random.c.rej (fixed)
+2 out of 2 hunks ignored -- saving rejects to file drivers/mfd/ab3100-core.c.rej (no fix needed)
+1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/core/hub.c.rej (no fix needed)
+1 out of 1 hunk ignored -- saving rejects to file include/linux/irqdesc.h.rej (no fix needed)
+1 out of 1 hunk ignored -- saving rejects to file include/linux/random.h.rej (no fix needed)
+3 out of 3 hunks ignored -- saving rejects to file kernel/irq/handle.c.rej (no fix needed)
+2 out of 2 hunks ignored -- saving rejects to file kernel/irq/manage.c.rej (no fix needed)
+3 out of 3 hunks ignored -- saving rejects to file net/core/dev.c.rej (no fix needed)
+1 out of 1 hunk ignored -- saving rejects to file net/core/rtnetlink.c.rej (no fix needed)
 
