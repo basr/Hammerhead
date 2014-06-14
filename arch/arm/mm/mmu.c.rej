@@ -1,10 +1,20 @@
 --- arch/arm/mm/mmu.c
 +++ arch/arm/mm/mmu.c
-@@ -1137,6 +1210,7 @@
- 	 */
- 	if (mdesc->map_io)
- 		mdesc->map_io();
-+	fill_pmd_gaps();
+@@ -805,7 +805,7 @@
+ 	vm = early_alloc_aligned(sizeof(*vm), __alignof__(*vm));
+ 	vm->addr = (void *)addr;
+ 	vm->size = SECTION_SIZE;
+-	vm->flags = VM_IOREMAP | VM_ARM_STATIC_MAPPING;
++	vm->flags = VM_IOREMAP | VM_ARM_EMPTY_MAPPING;
+ 	vm->caller = pmd_empty_section_gap;
+ 	vm_area_add_early(vm);
+ }
+@@ -818,7 +818,7 @@
  
- 	/*
- 	 * Finally flush the caches and tlb to ensure that we're in a
+ 	/* we're still single threaded hence no lock needed here */
+ 	for (vm = vmlist; vm; vm = vm->next) {
+-		if (!(vm->flags & VM_ARM_STATIC_MAPPING))
++		if (!(vm->flags & (VM_ARM_STATIC_MAPPING | VM_ARM_EMPTY_MAPPING)))
+ 			continue;
+ 		addr = (unsigned long)vm->addr;
+ 		if (addr < next)
