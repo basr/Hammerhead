@@ -1,5 +1,9 @@
-1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/gadget/u_ether.c.rej
-1 out of 1 hunk ignored -- saving rejects to file drivers/usb/host/xhci-ring.c.rej
-1 out of 1 hunk FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej
+1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/gadget/u_ether.c.rej (fixed)
+1 out of 1 hunk ignored -- saving rejects to file drivers/usb/host/xhci-ring.c.rej (no fix needed)
+1 out of 1 hunk FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej (fixed)
+
+XTRA FIX
+
+drivers/usb/host/xhci.c
 
 
