@@ -1,25 +1,9 @@
-1 out of 1 hunk ignored -- saving rejects to file arch/arm/Makefile.rej
-1 out of 1 hunk ignored -- saving rejects to file arch/arm/include/asm/assembler.h.rej
-1 out of 1 hunk FAILED -- saving rejects to file arch/arm/include/asm/mutex.h.rej
-2 out of 2 hunks ignored -- saving rejects to file arch/arm/include/asm/uaccess.h.rej
-1 out of 1 hunk FAILED -- saving rejects to file arch/arm/kernel/traps.c.rej
-2 out of 2 hunks ignored -- saving rejects to file arch/arm/lib/getuser.S.rej
-3 out of 3 hunks ignored -- saving rejects to file arch/arm/lib/putuser.S.rej
-1 out of 1 hunk ignored -- saving rejects to file arch/arm/mm/mm.h.rej
-2 out of 2 hunks ignored -- saving rejects to file arch/arm/mm/mmu.c.rej
-1 out of 2 hunks FAILED -- saving rejects to file drivers/bluetooth/btusb.c.rej
-3 out of 3 hunks ignored -- saving rejects to file drivers/mmc/card/block.c.rej
-1 out of 1 hunk ignored -- saving rejects to file drivers/usb/dwc3/ep0.c.rej
-1 out of 1 hunk ignored -- saving rejects to file drivers/usb/dwc3/gadget.c.rej
-1 out of 1 hunk ignored -- saving rejects to file drivers/usb/host/ehci-q.c.rej
-1 out of 7 hunks FAILED -- saving rejects to file drivers/usb/host/xhci.c.rej
-1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej
-1 out of 1 hunk ignored -- saving rejects to file include/linux/mmc/card.h.rej
-1 out of 1 hunk ignored -- saving rejects to file include/net/scm.h.rej
-2 out of 2 hunks FAILED -- saving rejects to file net/bluetooth/hci_conn.c.rej
-2 out of 2 hunks FAILED -- saving rejects to file net/bluetooth/l2cap_core.c.rej
-1 out of 1 hunk FAILED -- saving rejects to file net/bluetooth/mgmt.c.rej
-2 out of 2 hunks FAILED -- saving rejects to file net/bluetooth/smp.c.rej
-3 out of 3 hunks ignored -- saving rejects to file net/netlink/af_netlink.c.rej
-2 out of 2 hunks ignored -- saving rejects to file net/unix/af_unix.c.rej
+1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/gadget/u_ether.c.rej (fixed)
+1 out of 1 hunk ignored -- saving rejects to file drivers/usb/host/xhci-ring.c.rej (no fix needed)
+1 out of 1 hunk FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej (fixed)
+
+XTRA FIX
+
+drivers/usb/host/xhci.c
+
 

@@ -1,0 +1,10 @@
+--- drivers/usb/dwc3/ep0.c
++++ drivers/usb/dwc3/ep0.c
+@@ -569,7 +569,6 @@
+ 		transferred = min_t(u32, ur->length,
+ 				transfer_size - length);
+ 		memcpy(ur->buf, dwc->ep0_bounce, transferred);
+-		dwc->ep0_bounced = false;
+ 	} else {
+ 		transferred = ur->length - length;
+ 	}
