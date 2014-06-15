@@ -1,25 +1,30 @@
 --- net/bluetooth/mgmt.c
 +++ net/bluetooth/mgmt.c
-@@ -2801,6 +2801,22 @@
- 		if (scan)
- 			hci_send_cmd(hdev, HCI_OP_WRITE_SCAN_ENABLE, 1, &scan);
+@@ -2833,6 +2833,27 @@
+ 	return err;
+ }
  
-+		if (test_bit(HCI_SSP_ENABLED, &hdev->dev_flags)) {
-+			u8 ssp = 1;
++int mgmt_set_powered_failed(struct hci_dev *hdev, int err)
++{
++	struct pending_cmd *cmd;
++	u8 status;
 +
-+			hci_send_cmd(hdev, HCI_OP_WRITE_SSP_MODE, 1, &ssp);
-+		}
++	cmd = mgmt_pending_find(MGMT_OP_SET_POWERED, hdev);
++	if (!cmd)
++		return -ENOENT;
 +
-+		if (test_bit(HCI_LE_ENABLED, &hdev->dev_flags)) {
-+			struct hci_cp_write_le_host_supported cp;
++	if (err == -ERFKILL)
++		status = MGMT_STATUS_RFKILLED;
++	else
++		status = MGMT_STATUS_FAILED;
 +
-+			cp.le = 1;
-+			cp.simul = !!(hdev->features[6] & LMP_SIMUL_LE_BR);
++	err = cmd_status(cmd->sk, hdev->id, MGMT_OP_SET_POWERED, status);
 +
-+			hci_send_cmd(hdev, HCI_OP_WRITE_LE_HOST_SUPPORTED,
-+				     sizeof(cp), &cp);
-+		}
++	mgmt_pending_remove(cmd);
 +
- 		update_class(hdev);
- 		update_name(hdev, hdev->dev_name);
- 		update_eir(hdev);
++	return err;
++}
++
+ int mgmt_discoverable(struct hci_dev *hdev, u8 discoverable)
+ {
+ 	struct cmd_lookup match = { NULL, hdev };
