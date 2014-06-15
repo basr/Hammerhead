@@ -1,6 +1,6 @@
-2 out of 2 hunks ignored -- saving rejects to file drivers/net/usb/usbnet.c.rej
-1 out of 3 hunks FAILED -- saving rejects to file include/sound/core.h.rej
-6 out of 6 hunks ignored -- saving rejects to file net/netlink/af_netlink.c.rej
+2 out of 2 hunks ignored -- saving rejects to file drivers/net/usb/usbnet.c.rej (no fix needed)
+1 out of 3 hunks FAILED -- saving rejects to file include/sound/core.h.rej (fixed)
+6 out of 6 hunks ignored -- saving rejects to file net/netlink/af_netlink.c.rej (no fix needed)
 
 
 
