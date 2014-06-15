@@ -1,0 +1,6 @@
+1 out of 1 hunk FAILED -- saving rejects to file drivers/bluetooth/ath3k.c.rej
+1 out of 1 hunk FAILED -- saving rejects to file drivers/bluetooth/btusb.c.rej
+1 out of 1 hunk FAILED -- saving rejects to file include/linux/freezer.h.rej
+1 out of 1 hunk FAILED -- saving rejects to file include/net/tcp.h.rej
+1 out of 2 hunks FAILED -- saving rejects to file net/bluetooth/rfcomm/sock.c.rej
+
