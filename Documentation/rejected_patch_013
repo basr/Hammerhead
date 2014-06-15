@@ -1,2 +1,2 @@
-3 out of 14 hunks FAILED -- saving rejects to file drivers/usb/host/xhci.c.rej
-1 out of 5 hunks FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej
+3 out of 14 hunks FAILED -- saving rejects to file drivers/usb/host/xhci.c.rej (fixed)
+1 out of 5 hunks FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej (fixed)

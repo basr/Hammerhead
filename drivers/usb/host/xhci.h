@@ -1498,14 +1498,15 @@ struct xhci_hcd {
  * commands, reset device commands, disable slot commands, and address device
  * commands.
  */
-#define XHCI_EP_LIMIT_QUIRK	(1 << 5)
-#define XHCI_BROKEN_MSI		(1 << 6)
+#define XHCI_EP_LIMIT_QUIRK		(1 << 5)
+#define XHCI_BROKEN_MSI			(1 << 6)
 #define XHCI_RESET_ON_RESUME	(1 << 7)
-#define	XHCI_SW_BW_CHECKING	(1 << 8)
-#define XHCI_AMD_0x96_HOST	(1 << 9)
+#define	XHCI_SW_BW_CHECKING		(1 << 8)
+#define XHCI_AMD_0x96_HOST		(1 << 9)
 #define XHCI_TRUST_TX_LENGTH	(1 << 10)
 #define XHCI_SPURIOUS_REBOOT	(1 << 13)
 #define XHCI_COMP_MODE_QUIRK	(1 << 14)
+#define XHCI_AVOID_BEI			(1 << 15)
 /*
  * In Synopsis DWC3 controller, PORTSC register access involves multiple clock
  * domains. When the software does a PORTSC write, handshakes are needed
