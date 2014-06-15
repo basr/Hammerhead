@@ -1,4 +1,4 @@
-1 out of 1 hunk ignored -- saving rejects to file include/linux/sched.h.rej
-7 out of 7 hunks ignored -- saving rejects to file kernel/ptrace.c.rej
-4 out of 4 hunks ignored -- saving rejects to file kernel/signal.c.rej
+1 out of 1 hunk ignored -- saving rejects to file include/linux/sched.h.rej (no fix needed)
+7 out of 7 hunks ignored -- saving rejects to file kernel/ptrace.c.rej (no fix needed)
+4 out of 4 hunks ignored -- saving rejects to file kernel/signal.c.rej (no fix needed)
 
