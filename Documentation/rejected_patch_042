@@ -1,7 +1,11 @@
-1 out of 1 hunk FAILED -- saving rejects to file drivers/mtd/mtdchar.c.rej
-1 out of 1 hunk ignored -- saving rejects to file kernel/events/core.c.rej
-2 out of 2 hunks ignored -- saving rejects to file kernel/hrtimer.c.rej
-1 out of 1 hunk FAILED -- saving rejects to file kernel/sched/core.c.rej
+1 out of 1 hunk FAILED -- saving rejects to file drivers/mtd/mtdchar.c.rej (fixed)
+1 out of 1 hunk ignored -- saving rejects to file kernel/events/core.c.rej (no fix needed)
+2 out of 2 hunks ignored -- saving rejects to file kernel/hrtimer.c.rej (no fix needed)
+1 out of 1 hunk FAILED -- saving rejects to file kernel/sched/core.c.rej (no fix needed)
+
+XTRA FIX
+
+include/linux/kref.h (double code caused build error)
 
 
 
