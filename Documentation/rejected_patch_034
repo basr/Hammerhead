@@ -1,9 +1,9 @@
-1 out of 1 hunk ignored -- saving rejects to file arch/arm/kernel/sched_clock.c.rej
-1 out of 1 hunk ignored -- saving rejects to file include/net/inet6_hashtables.h.rej
-1 out of 1 hunk ignored -- saving rejects to file include/net/inet_sock.h.rej
-2 out of 2 hunks ignored -- saving rejects to file include/net/ipv6.h.rej
-3 out of 3 hunks ignored -- saving rejects to file kernel/hrtimer.c.rej
-1 out of 1 hunk ignored -- saving rejects to file net/core/sock_diag.c.rej
-2 out of 2 hunks ignored -- saving rejects to file net/ipv4/af_inet.c.rej
-1 out of 1 hunk FAILED -- saving rejects to file net/ipv4/ping.c.rej
+1 out of 1 hunk ignored -- saving rejects to file arch/arm/kernel/sched_clock.c.rej (no fix needed)
+1 out of 1 hunk ignored -- saving rejects to file include/net/inet6_hashtables.h.rej (no fix needed)
+1 out of 1 hunk ignored -- saving rejects to file include/net/inet_sock.h.rej (no fix needed)
+2 out of 2 hunks ignored -- saving rejects to file include/net/ipv6.h.rej (no fix needed)
+3 out of 3 hunks ignored -- saving rejects to file kernel/hrtimer.c.rej (no fix needed)
+1 out of 1 hunk ignored -- saving rejects to file net/core/sock_diag.c.rej (no fix needed)
+2 out of 2 hunks ignored -- saving rejects to file net/ipv4/af_inet.c.rej (no fix needed)
+1 out of 1 hunk FAILED -- saving rejects to file net/ipv4/ping.c.rej (fixed)
 
