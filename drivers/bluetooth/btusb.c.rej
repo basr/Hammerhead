@@ -1,10 +1,13 @@
 --- drivers/bluetooth/btusb.c
 +++ drivers/bluetooth/btusb.c
-@@ -130,6 +130,7 @@
- 	{ USB_DEVICE(0x13d3, 0x3304), .driver_info = BTUSB_IGNORE },
- 	{ USB_DEVICE(0x0930, 0x0215), .driver_info = BTUSB_IGNORE },
- 	{ USB_DEVICE(0x0489, 0xe03d), .driver_info = BTUSB_IGNORE },
-+	{ USB_DEVICE(0x0489, 0xe027), .driver_info = BTUSB_IGNORE },
- 
- 	/* Atheros AR9285 Malbec with sflash firmware */
+@@ -136,8 +136,10 @@
  	{ USB_DEVICE(0x03f0, 0x311d), .driver_info = BTUSB_IGNORE },
+ 
+ 	/* Atheros 3012 with sflash firmware */
++	{ USB_DEVICE(0x0cf3, 0x0036), .driver_info = BTUSB_ATH3012 },
+ 	{ USB_DEVICE(0x0cf3, 0x3004), .driver_info = BTUSB_ATH3012 },
+ 	{ USB_DEVICE(0x0cf3, 0x311d), .driver_info = BTUSB_ATH3012 },
++	{ USB_DEVICE(0x0cf3, 0x817a), .driver_info = BTUSB_ATH3012 },
+ 	{ USB_DEVICE(0x13d3, 0x3375), .driver_info = BTUSB_ATH3012 },
+ 	{ USB_DEVICE(0x04ca, 0x3005), .driver_info = BTUSB_ATH3012 },
+ 	{ USB_DEVICE(0x13d3, 0x3362), .driver_info = BTUSB_ATH3012 },
