@@ -1,0 +1,10 @@
+--- include/net/inet_sock.h
++++ include/net/inet_sock.h
+@@ -202,6 +202,7 @@
+ extern int inet_sk_rebuild_header(struct sock *sk);
+ 
+ extern u32 inet_ehash_secret;
++extern u32 ipv6_hash_secret;
+ extern void build_ehash_secret(void);
+ 
+ static inline unsigned int inet_ehashfn(struct net *net,
