@@ -1,10 +1,21 @@
 --- drivers/usb/dwc3/gadget.c
 +++ drivers/usb/dwc3/gadget.c
-@@ -1777,6 +1777,7 @@
- 		ret = dwc3_send_gadget_ep_cmd(dwc, dep->number, cmd, &params);
- 		WARN_ON_ONCE(ret);
- 		dep->res_trans_idx = 0;
-+		dep->flags &= ~DWC3_EP_BUSY;
+@@ -1101,9 +1101,6 @@
+ 		else
+ 			dep->flags |= DWC3_EP_STALL;
+ 	} else {
+-		if (dep->flags & DWC3_EP_WEDGE)
+-			return 0;
+-
+ 		ret = dwc3_send_gadget_ep_cmd(dwc, dep->number,
+ 			DWC3_DEPCMD_CLEARSTALL, &params);
+ 		if (ret)
+@@ -1111,7 +1108,7 @@
+ 					value ? "set" : "clear",
+ 					dep->name);
+ 		else
+-			dep->flags &= ~DWC3_EP_STALL;
++			dep->flags &= ~(DWC3_EP_STALL | DWC3_EP_WEDGE);
  	}
- }
  
+ 	return ret;
