@@ -1,5 +1,9 @@
-1 out of 4 hunks FAILED -- saving rejects to file drivers/md/dm-crypt.c.rej
-8 out of 8 hunks ignored -- saving rejects to file drivers/mmc/card/block.c.rej
-3 out of 4 hunks FAILED -- saving rejects to file net/ipv4/ping.c.rej
+1 out of 4 hunks FAILED -- saving rejects to file drivers/md/dm-crypt.c.rej (fixed)
+8 out of 8 hunks ignored -- saving rejects to file drivers/mmc/card/block.c.rej (no fix needed)
+3 out of 4 hunks FAILED -- saving rejects to file net/ipv4/ping.c.rej (fixed)
+
+XTRA FIX
+net/ipv6/ping.c
+
 
 
