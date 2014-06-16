@@ -1,10 +1,11 @@
 --- drivers/usb/host/xhci-plat.c
 +++ drivers/usb/host/xhci-plat.c
-@@ -179,6 +179,7 @@
+@@ -24,7 +24,7 @@
+ 	 * here that the generic code does not try to make a pci_dev from our
+ 	 * dev struct in order to setup MSI
+ 	 */
+-	xhci->quirks |= XHCI_BROKEN_MSI;
++	xhci->quirks |= XHCI_PLAT;
+ }
  
- 	usb_remove_hcd(hcd);
- 	iounmap(hcd->regs);
-+	release_mem_region(hcd->rsrc_start, hcd->rsrc_len);
- 	usb_put_hcd(hcd);
- 	kfree(xhci);
- 
+ /* called during probe() after chip reset completes */
