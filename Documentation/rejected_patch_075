@@ -1,5 +1,5 @@
-1 out of 1 hunk FAILED -- saving rejects to file drivers/usb/dwc3/ep0.c.rej
-2 out of 2 hunks ignored -- saving rejects to file drivers/usb/dwc3/gadget.c.rej
+1 out of 1 hunk FAILED -- saving rejects to file drivers/usb/dwc3/ep0.c.rej (no fix needed)
+2 out of 2 hunks ignored -- saving rejects to file drivers/usb/dwc3/gadget.c.rej (no fix needed)
 
 
 
