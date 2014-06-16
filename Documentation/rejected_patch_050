@@ -1,5 +1,5 @@
-1 out of 1 hunk FAILED -- saving rejects to file include/net/bluetooth/hci_core.h.rej
-1 out of 1 hunk FAILED -- saving rejects to file include/net/bluetooth/mgmt.h.rej
-1 out of 1 hunk FAILED -- saving rejects to file net/bluetooth/hci_core.c.rej
-1 out of 1 hunk FAILED -- saving rejects to file net/bluetooth/mgmt.c.rej
+1 out of 1 hunk FAILED -- saving rejects to file include/net/bluetooth/hci_core.h.rej (skip fix)
+1 out of 1 hunk FAILED -- saving rejects to file include/net/bluetooth/mgmt.h.rej (skip fix)
+1 out of 1 hunk FAILED -- saving rejects to file net/bluetooth/hci_core.c.rej (fixed)
+1 out of 1 hunk FAILED -- saving rejects to file net/bluetooth/mgmt.c.rej (fixed)
 
