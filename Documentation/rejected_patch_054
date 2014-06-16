@@ -1,0 +1,4 @@
+1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/gadget/f_mass_storage.c.rej 
+1 out of 1 hunk ignored -- saving rejects to file drivers/usb/host/xhci-plat.c.rej
+
+

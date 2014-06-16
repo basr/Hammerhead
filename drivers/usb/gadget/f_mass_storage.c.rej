@@ -1,0 +1,10 @@
+--- drivers/usb/gadget/f_mass_storage.c
++++ drivers/usb/gadget/f_mass_storage.c
+@@ -731,6 +732,7 @@
+ 	}
+ 	__set_current_state(TASK_RUNNING);
+ 	common->thread_wakeup_needed = 0;
++	smp_rmb();	/* ensure the latest bh->state is visible */
+ 	return rc;
+ }
+ 
