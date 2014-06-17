@@ -1,0 +1,5 @@
+3 out of 3 hunks FAILED -- saving rejects to file drivers/bluetooth/ath3k.c.rej
+3 out of 4 hunks FAILED -- saving rejects to file drivers/bluetooth/btusb.c.rej
+7 out of 19 hunks FAILED -- saving rejects to file net/bluetooth/l2cap_core.c.rej
+
+
