@@ -1,0 +1,4 @@
+1 out of 1 hunk ignored -- saving rejects to file kernel/printk.c.rej
+1 out of 1 hunk FAILED -- saving rejects to file mm/internal.h.rej
+1 out of 1 hunk ignored -- saving rejects to file security/selinux/ss/services.c.rej
+
