@@ -1,0 +1,7 @@
+2 out of 2 hunks FAILED -- saving rejects to file drivers/media/dvb/dvb-core/dmxdev.c.rej
+1 out of 2 hunks FAILED -- saving rejects to file drivers/usb/core/driver.c.rej
+2 out of 2 hunks FAILED -- saving rejects to file drivers/usb/host/xhci-hub.c.rej
+1 out of 1 hunk FAILED -- saving rejects to file drivers/usb/host/xhci.h.rej
+1 out of 1 hunk FAILED -- saving rejects to file drivers/usb/serial/qcserial.c.rej
+
+
