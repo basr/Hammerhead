@@ -1,23 +1,101 @@
 --- net/bluetooth/l2cap_core.c
 +++ net/bluetooth/l2cap_core.c
-@@ -2585,12 +2585,14 @@
- 	while (len >= L2CAP_CONF_OPT_SIZE) {
- 		len -= l2cap_get_conf_opt(&rsp, &type, &olen, &val);
- 
--		switch (type) {
--		case L2CAP_CONF_RFC:
--			if (olen == sizeof(rfc))
--				memcpy(&rfc, (void *)val, olen);
--			goto done;
--		}
-+		if (type != L2CAP_CONF_RFC)
-+			continue;
-+
-+		if (olen != sizeof(rfc))
-+			break;
-+
-+		memcpy(&rfc, (void *)val, olen);
-+		goto done;
+@@ -2620,10 +2620,15 @@
  	}
+ }
  
- 	/* Use sane default values in case a misbehaving remote device
+-static inline int l2cap_command_rej(struct l2cap_conn *conn, struct l2cap_cmd_hdr *cmd, u8 *data)
++static inline int l2cap_command_rej(struct l2cap_conn *conn,
++				    struct l2cap_cmd_hdr *cmd, u16 cmd_len,
++				    u8 *data)
+ {
+ 	struct l2cap_cmd_rej_unk *rej = (struct l2cap_cmd_rej_unk *) data;
+ 
++	if (cmd_len < sizeof(*rej))
++		return -EPROTO;
++
+ 	if (rej->reason != L2CAP_REJ_NOT_UNDERSTOOD)
+ 		return 0;
+ 
+@@ -2640,7 +2645,8 @@
+ 	return 0;
+ }
+ 
+-static inline int l2cap_connect_req(struct l2cap_conn *conn, struct l2cap_cmd_hdr *cmd, u8 *data)
++static int l2cap_connect_req(struct l2cap_conn *conn,
++			     struct l2cap_cmd_hdr *cmd, u16 cmd_len, u8 *data)
+ {
+ 	struct l2cap_conn_req *req = (struct l2cap_conn_req *) data;
+ 	struct l2cap_conn_rsp rsp;
+@@ -2896,7 +2916,7 @@
+ 
+ 	/* Reject if config buffer is too small. */
+ 	len = cmd_len - sizeof(*req);
+-	if (len < 0 || chan->conf_len + len > sizeof(chan->conf_req)) {
++	if (chan->conf_len + len > sizeof(chan->conf_req)) {
+ 		l2cap_send_cmd(conn, cmd->ident, L2CAP_CONF_RSP,
+ 				l2cap_build_conf_rsp(chan, rsp,
+ 					L2CAP_CONF_REJECT, flags), rsp);
+@@ -2973,12 +2993,17 @@
+ 	return 0;
+ }
+ 
+-static inline int l2cap_config_rsp(struct l2cap_conn *conn, struct l2cap_cmd_hdr *cmd, u8 *data)
++static inline int l2cap_config_rsp(struct l2cap_conn *conn,
++				   struct l2cap_cmd_hdr *cmd, u16 cmd_len,
++				   u8 *data)
+ {
+ 	struct l2cap_conf_rsp *rsp = (struct l2cap_conf_rsp *)data;
+ 	u16 scid, flags, result;
+ 	struct l2cap_chan *chan;
+-	int len = cmd->len - sizeof(*rsp);
++	int len = cmd_len - sizeof(*rsp);
++
++	if (cmd_len < sizeof(*rsp))
++		return -EPROTO;
+ 
+ 	scid   = __le16_to_cpu(rsp->scid);
+ 	flags  = __le16_to_cpu(rsp->flags);
+@@ -3129,12 +3159,17 @@
+ 	return 0;
+ }
+ 
+-static inline int l2cap_disconnect_rsp(struct l2cap_conn *conn, struct l2cap_cmd_hdr *cmd, u8 *data)
++static inline int l2cap_disconnect_rsp(struct l2cap_conn *conn,
++				       struct l2cap_cmd_hdr *cmd, u16 cmd_len,
++				       u8 *data)
+ {
+ 	struct l2cap_disconn_rsp *rsp = (struct l2cap_disconn_rsp *) data;
+ 	u16 dcid, scid;
+ 	struct l2cap_chan *chan;
+ 
++	if (cmd_len != sizeof(*rsp))
++		return -EPROTO;
++
+ 	scid = __le16_to_cpu(rsp->scid);
+ 	dcid = __le16_to_cpu(rsp->dcid);
+ 
+@@ -3311,11 +3356,12 @@
+ }
+ 
+ static inline int l2cap_create_channel_rsp(struct l2cap_conn *conn,
+-					struct l2cap_cmd_hdr *cmd, void *data)
++					struct l2cap_cmd_hdr *cmd, u16 cmd_len,
++					void *data)
+ {
+ 	BT_DBG("conn %p", conn);
+ 
+-	return l2cap_connect_rsp(conn, cmd, data);
++	return l2cap_connect_rsp(conn, cmd, cmd_len, data);
+ }
+ 
+ static void l2cap_send_move_chan_rsp(struct l2cap_conn *conn, u8 ident,
+@@ -3428,7 +3474,7 @@
+ 	struct l2cap_move_chan_cfm_rsp *rsp = data;
+ 	u16 icid;
+ 
+-	if (cmd_len != sizeof(*rsp))
++	if (cmd_len < sizeof(*rsp))
+ 		return -EPROTO;
+ 
+ 	icid = le16_to_cpu(rsp->icid);
