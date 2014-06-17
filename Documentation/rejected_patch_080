@@ -1,0 +1,6 @@
+1 out of 1 hunk ignored -- saving rejects to file kernel/sched/core.c.rej
+3 out of 3 hunks ignored -- saving rejects to file kernel/sched/fair.c.rej
+5 out of 5 hunks ignored -- saving rejects to file kernel/sched/rt.c.rej
+1 out of 1 hunk ignored -- saving rejects to file kernel/sched/sched.h.rej
+1 out of 7 hunks FAILED -- saving rejects to file kernel/time/timekeeping.c.rej
+
